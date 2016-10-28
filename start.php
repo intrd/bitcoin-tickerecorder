@@ -32,10 +32,11 @@ $client = new OKCoin(new OKCoin_ApiKeyAuthentication($secrets["API_KEY"], $secre
 
 $params = array('symbol' => 'btc_usd', 'contract_type' => 'this_week');
 $result = $client -> tickerFutureApi($params);
-$array = json_decode(json_encode($result), true);
-$array = json_encode($array);
+//var_dump($result->date);
 
-$buffer_file=$conf["data_path"]."buffer.json";
-if(fwrite_a($buffer_file,$array."\r\n")){
-	//echo "saved!";
+if (isset($result->date)){
+	$array = json_decode(json_encode($result), true);
+	$array = json_encode($array);
+	$buffer_file=$conf["data_path"]."buffer.json";
+	fwrite_a($buffer_file,$array."\r\n");
 }
