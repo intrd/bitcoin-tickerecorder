@@ -23,7 +23,7 @@ do
 	echo "
 	$TIMESTAMP STARTING.." >> /dev/null
 	php start.php 2>&1 | tee -a /dev/null
-	sleep 5
+	sleep 10
 done
 
 
