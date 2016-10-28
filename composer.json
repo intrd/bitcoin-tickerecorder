@@ -1,0 +1,30 @@
+{
+    "name": "intrd/bitcoin-tickerecorder",
+    "description": "Bitcoin ticker recorder for exchanges",
+    "keywords": ["bot","eggdrop","bitcoin"],
+    "homepage": "http://github.com/intrd/bitcoin-tickerecorder",
+    "authors": [
+            {
+                "name": "intrd (Danilo Salles)",
+                "email": "x@dann.com.br",
+                "homepage": "http://dann.com.br",
+                "role": "Developer"
+            }
+        ],
+    "license": "CC-BY-SA-4.0",
+    "require": {
+        "php": ">=5.3.0",
+        "intrd/php-common": ">=1.0.x-dev <dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "telegram\\":"src/"
+        }
+    },
+    "extra": {
+        "author_twitter":"intrd",
+        "copyright_author":"intrd",
+        "license_title":"Creative Commons Attribution-ShareAlike 4.0",
+        "license_url":"http://creativecommons.org/licenses/by-sa/4.0"
+    }
+}
