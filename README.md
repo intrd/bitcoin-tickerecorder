@@ -37,6 +37,8 @@ Bitcoin ticker recorder for exchanges
 </span>
 <!-- @docbloc 1.1 -->
 
+* Recording on OKCoin Futures data (API)
+
 ## System installation
 ```
 apt-get update & apt-get upgrade
