@@ -1,6 +1,6 @@
 <!-- docbloc -->
 <span id='docbloc'>
-Bitcoin ticker recorder for exchanges
+Simple bitcoin ticker recorder for exchanges
 <table>
 <tr>
 <th>Package</th>
