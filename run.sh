@@ -16,15 +16,28 @@
 #!/bin/bash
 TIMESTAMP=`date "+%Y-%m-%d_%H:%M:%S"`
 LOGFILE="LOGS/bitcoin-tickerecorder.log"
-touch /dev/null
+#touch /dev/null
 
-while true
-do
-	echo "
-	$TIMESTAMP STARTING.." >> /dev/null
-	php start.php 2>&1 | tee -a /dev/null
-	sleep 10
-done
+(sleep 5 && php /home/prod/bitcoin-tickerrecorder/start.php 2>&1 | tee -a /dev/null) &
+(sleep 10 && php /home/prod/bitcoin-tickerrecorder/start.php 2>&1 | tee -a /dev/null) &
+(sleep 15 && php /home/prod/bitcoin-tickerrecorder/start.php 2>&1 | tee -a /dev/null) &
+(sleep 20 && php /home/prod/bitcoin-tickerrecorder/start.php 2>&1 | tee -a /dev/null) &
+(sleep 25 && php /home/prod/bitcoin-tickerrecorder/start.php 2>&1 | tee -a /dev/null) &
+(sleep 30 && php /home/prod/bitcoin-tickerrecorder/start.php 2>&1 | tee -a /dev/null) &
+(sleep 35 && php /home/prod/bitcoin-tickerrecorder/start.php 2>&1 | tee -a /dev/null) &
+(sleep 40 && php /home/prod/bitcoin-tickerrecorder/start.php 2>&1 | tee -a /dev/null) &
+(sleep 45 && php /home/prod/bitcoin-tickerrecorder/start.php 2>&1 | tee -a /dev/null) &
+(sleep 50 && php /home/prod/bitcoin-tickerrecorder/start.php 2>&1 | tee -a /dev/null) &
+(sleep 55 && php /home/prod/bitcoin-tickerrecorder/start.php 2>&1 | tee -a /dev/null) &
+(sleep 60 && php /home/prod/bitcoin-tickerrecorder/start.php 2>&1 | tee -a /dev/null) &
+
+#while true
+#do
+#	echo "
+#	$TIMESTAMP STARTING.." >> /dev/null
+#	php start.php 2>&1 | tee -a /dev/null
+#	#sleep 10
+#done
 
 
 
