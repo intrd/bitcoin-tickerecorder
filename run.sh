@@ -16,7 +16,6 @@
 #!/bin/bash
 TIMESTAMP=`date "+%Y-%m-%d_%H:%M:%S"`
 LOGFILE="LOGS/bitcoin-tickerecorder.log"
-#touch /dev/null
 
 (sleep 10 && php /home/prod/bitcoin-tickerecorder/start.php 2>&1 | tee -a /dev/null) &
 (sleep 20 && php /home/prod/bitcoin-tickerecorder/start.php 2>&1 | tee -a /dev/null) &
@@ -25,13 +24,7 @@ LOGFILE="LOGS/bitcoin-tickerecorder.log"
 (sleep 50 && php /home/prod/bitcoin-tickerecorder/start.php 2>&1 | tee -a /dev/null) &
 (sleep 60 && php /home/prod/bitcoin-tickerecorder/start.php 2>&1 | tee -a /dev/null) &
 
-#while true
-#do
-#	echo "
-#	$TIMESTAMP STARTING.." >> /dev/null
-#	php start.php 2>&1 | tee -a /dev/null
-#	#sleep 10
-#done
+# Cron it: * * * * * ~/bitcoin-tickerecorder/run.sh
 
 
 
